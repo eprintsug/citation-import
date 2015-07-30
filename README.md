@@ -45,14 +45,16 @@ from CPAN:
 updating the one packaged with EPrints in *perl_lib* or by deleting that
 one and using the latest from CPAN. *NOTE:* ensure that `URI::OpenURL`
 remains installed.
-
+<del>
 1.  Copy all of the files in the *eprints* sub-directory into the root directory
     of your EPrints installation, e.g. `cp -R eprints/* /opt/eprints3`
-
+</del>
+<del>
 2.  Copy all of the files in the *archives* sub-directory into the configuration
     folder of the archive into which you want to import citation data, e.g.
     `cp -R archives/* /opt/eprints3/archives/foobar`
-
+</del>
+<del>
 3.  Go to the *cfg.d* directory of your archive.
 
     1.  Move the contents of *eprint_fields.pl.inc* into your *eprints_fields.pl*
@@ -62,9 +64,9 @@ remains installed.
     5.  If you want to view and manipulate citation objects via the "Manage
         Records" interface, add the lines "+citation/view" and
         "+citation/destroy" the appropriate user roles in *user_roles.pl*
-
+</del>
 4.  Update the database structure of your archive to include the new dataset
-    and fields, e.g. `epadmin update_database_structure foobar`
+    and fields, e.g. `epadmin update foobar`
 
 You may also want to look through the import plug-ins themselves and ensure
 that their use of eprint types and fields is suitable for your archive.
